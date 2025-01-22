@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 University Library Management System
 
-## Getting Started
+A modern, full-stack library management system built with Next.js 15, TypeScript, and PostgreSQL. This system provides a seamless experience for both students and administrators to manage library resources efficiently.
 
-First, run the development server:
+## 🛠️ Technologies Used
 
-```bash
+- **Frontend**
+
+  - Next.js 15
+  - TypeScript
+  - Tailwind CSS
+  - ShadCN UI Components
+  - React Hook Form
+  - Zod Validation
+
+- **Backend**
+  - PostgreSQL with Neon
+  - Drizzle ORM
+  - NextAuth.js
+  - Upstash Redis
+  - ImageKit for media
+  - Resend for emails
+
+## ✨ Key Features
+
+### For Students
+
+- **Authentication & Profile**
+
+  - Email-based authentication
+  - University ID verification
+  - Profile management
+  - Activity tracking
+
+- **Book Management**
+
+  - Browse available books
+  - Advanced search & filtering
+  - Book details with 3D cover effects
+  - Video previews
+  - Real-time availability tracking
+
+- **Borrowing System**
+  - One-click book borrowing
+  - Automated due date reminders
+  - Digital receipts
+  - Return tracking
+  - Borrowing history
+
+### For Administrators
+
+- **Dashboard**
+
+  - Real-time statistics
+  - User activity monitoring
+  - Book inventory tracking
+  - Borrowing analytics
+
+- **User Management**
+
+  - Account approval system
+  - Role management
+  - Activity monitoring
+  - Bulk user actions
+
+- **Book Management**
+
+  - Add/Edit books
+  - Manage inventory
+  - Track borrowing history
+  - Generate reports
+
+- **Advanced Features**
+  - Rate limiting
+  - DDoS protection
+  - Caching system
+  - Email notifications
+  - PDF receipt generation
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+
+bash
+git clone https://github.com/your-username/university-library.git
+cd university-library
+
+2. **Install dependencies**
+
+bash
+npm install
+
+3. **Set up environment variables**
+   Create a `.env.local` file with:
+
+env
+NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY=
+IMAGEKIT_PRIVATE_KEY=
+NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT=
+DATABASE_URL=
+UPSTASH_REDIS_URL=
+UPSTASH_REDIS_TOKEN=
+AUTH_SECRET=
+RESEND_TOKEN=
+
+4. **Run migrations**
+
+bash
+npm run db:migrate
+
+5. **Start development server**
+
+bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+university-library/
+├── app/
+│ ├── (auth)/
+│ ├── (root)/
+│ └── admin/
+├── components/
+│ ├── ui/
+│ └── admin/
+├── database/
+│ ├── migrations/
+│ └── schema.ts
+├── lib/
+│ └── validations/
+└── public/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
 
-## Learn More
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🙏 Acknowledgments
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js team for the amazing framework
+- Vercel for hosting
+- Neon for PostgreSQL database
+- Upstash for Redis services
+- ImageKit for media management
